@@ -2,16 +2,16 @@ import "./navbar.css";
 import { Container, Row, Col } from "react-bootstrap";
 import NavInput from "./NavInput/NavInput";
 
-const NavBar = () => {
+const NavBar = ({inputValue, setInputValue, books, setBooks, allBooks, searchBooks}) => {
   return (
     <nav>
       <Container fluid>
         <Row>
-          <Col className=" d-flex align-items-center justify-content-evenly bg-dark text-white py-2">
+          <Col className=" d-flex align-items-center justify-content-between bg-dark text-white py-2 px-3">
             <div>Titolo sito</div>
             <ul className="d-flex align-items-center justify-content-center gap-3 list-unstyled linkList m-0">
               <li>
-                <a href="#">Chi Siamo</a>
+                <a href="#">Menu</a>
               </li>
               <li>
                 <a href="#">Carrello</a>
@@ -24,7 +24,13 @@ const NavBar = () => {
                 <a href="#">Contattaci</a>
               </li>
             </ul>
-            <NavInput/>
+            <NavInput
+           books={books}
+           setBooks={setBooks}
+           allBooks={allBooks}
+           searchBooks={searchBooks}
+           inputValue={inputValue}
+           setInputValue={setInputValue}/>
             
           </Col>
         </Row>

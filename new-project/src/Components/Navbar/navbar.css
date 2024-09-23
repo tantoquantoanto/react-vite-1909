@@ -1,4 +1,6 @@
-.linkList {
-    text-decoration: none;
+
+
+.linkList li a {
     color: white;
+    text-decoration: none;
 }
